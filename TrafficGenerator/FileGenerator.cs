@@ -149,8 +149,7 @@ namespace FileRandomizer
             }
 
             var names = new string[length];
-            //var stringBuilder = new StringBuilder();
-
+            
             for (int i = 0; i < length; i++)
             {
                 var stringBuilder = new StringBuilder();
@@ -158,7 +157,6 @@ namespace FileRandomizer
                 var _char = random.Next(1601, 6000).ToString();
                 stringBuilder.Append(_char).Append(_ch).Append(".file");
                 names[i] = stringBuilder.ToString();
-                //stringBuilder.Clear();
             }
 
             return names;
@@ -178,7 +176,6 @@ namespace FileRandomizer
                     /* get number of files */
                     Console.WriteLine("Enter number of random files generated:");
                     var numberOfFiles = Console.ReadLine(); //red number of file
-                    //var noOfFiles = 0; //no of files out param
                     var numberPattern = @"^[1-9]{1}[0-9]*$"; //use regular expression pattern
                     Regex regex = new Regex(numberPattern);
                     var isValid = regex.IsMatch(numberOfFiles); //try to match
@@ -194,7 +191,6 @@ namespace FileRandomizer
                     /* get maximum file size */
                     Console.WriteLine("Enter maximum file size in KBs:");
                     var size = Console.ReadLine(); //read size
-                    //var maxSize = 0; //maximum size out param
                     var sizePattern = @"^[1-9]{1}[0-9]*$"; //use regular expression pattern
                     regex = new Regex(sizePattern);
                     isValid = regex.IsMatch(size); //try to match
@@ -210,7 +206,6 @@ namespace FileRandomizer
                     /* get interval in seconds */
                     Console.WriteLine("Enter delay in milliseconds: ");
                     var delay = Console.ReadLine(); //read delay
-                    //var secondsDelay = 0;
                     var delayPattern = @"^[0-9]{1}[0-9]*$"; //use regular expression pattern
                     regex = new Regex(delayPattern);
                     isValid = regex.IsMatch(delay); //try to match               
@@ -249,9 +244,6 @@ namespace FileRandomizer
             {
                 Console.WriteLine("\n\n" + e.Message);
             }
-
         }
-
     }
-
 }
