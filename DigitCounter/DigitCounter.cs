@@ -1,4 +1,4 @@
-/// Author: John Christodoulou
+/// Author: Ioannis Christodoulou
 /// 
 using System;
 using System.Collections.Generic;
