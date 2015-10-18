@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoundedBlockingStack
+namespace LIFOBlockingStack
 {
     /// <summary>
     /// Defines the methods of the LIFO blocking stack structure: Push, Pop.
